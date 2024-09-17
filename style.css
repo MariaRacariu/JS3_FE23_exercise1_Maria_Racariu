@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    /* background-color: #f0ecdb; */
+}
+
+.imageContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+}
+
+.backgroundImage{
+    width: 80%;
+    height: auto;
+}
