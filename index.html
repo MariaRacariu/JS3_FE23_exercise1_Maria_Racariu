@@ -7,12 +7,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>SPA</title>
   </head>
   <body>
     <nav>
-      <ul>
+      <ul class="navigationContainer">
         <li>
           <a id="navigationHome">Home</a>
         </li>
@@ -24,9 +30,26 @@
         </li>
       </ul>
     </nav>
-    <div id="content"></div>
-    <footer>
+    <div id="content" class="content"></div>
+    <footer class="footer">
+      <div>
+        <div><p>Maria Racariu</p></div>
+        <div>
+          <a href="mailto:raca9maria@gmail.com"><p>raca9maria@gmail.com</p></a>
+        </div>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/maria-r-32a553185/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/MariaRacariu">
+          <i class="fa-brands fa-square-github"></i>
+        </a>
+      </div>
+
+      <!-- Scripts -->
       <script src="script.js"></script>
+      <script src="https://kit.fontawesome.com/251044f349.js" crossorigin="anonymous"></script>
     </footer>
   </body>
 </html>
