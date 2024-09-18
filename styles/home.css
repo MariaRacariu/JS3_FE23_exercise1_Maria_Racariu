@@ -74,7 +74,6 @@
     font-size: 40px;
     font-weight: 600;
     color: var(--fontDark);
-    /* Test */
     border-left: #62db9d solid 4px;
     padding-left: 15px;
 }
@@ -83,7 +82,7 @@
     background-color: #7afbb4;
     height: 100%;
     width: 500px;
-    border-right: 10px solid #51a57771;
+    border-right: 10px dashed #51a57771;
     -moz-transform: skew(30deg);
     -webkit-transform: skew(30deg);
     transform: skew(30deg);

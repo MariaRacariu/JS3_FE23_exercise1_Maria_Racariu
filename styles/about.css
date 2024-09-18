@@ -1,0 +1,88 @@
+:root{
+    --orange:#d88830;
+    --fontDark: #000;
+}
+
+.videoContainer{
+    background-color: var(--orange);
+}
+
+.videoContainer > iframe{
+    width: 1920px;
+    height: 1080px;
+}
+
+.basicInfoContainer{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--orange);
+}
+
+.infoContainer{
+    width: 700px;
+    padding-top: 100px;
+}
+
+.infoContainer > h1{
+    font-weight: 800;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.infoContainer > p{
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.imageContainer{
+    border: 8px dashed #51a57771;
+}
+
+.imageContainer > img{
+    width: 250px;
+    height: auto;
+}
+
+.talentSection{
+    background-color: #7afbb4;
+    box-shadow: 10px 4px 40px #646464;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.talentSection > div{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding-bottom: 20px;
+}
+
+.sectionTitle{
+    padding: 20px 0px 20px 0px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.talentInfoContainer{
+    display: flex;
+    align-items: end;
+    padding-bottom: 20px;
+}
+
+.talentInfoContainer > h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.talentInfoContainer > p{
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.textContainer{
+    padding-bottom: 20px;
+}

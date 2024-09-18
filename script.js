@@ -2,8 +2,21 @@ let home = document.getElementById("navigationHome");
 let about = document.getElementById("navigationAbout");
 let contact = document.getElementById("navigationContact");
 
+var loadingTimeout;
+const loader = document.getElementById("loader");
+const content = document.getElementById("content");
+
 // When the window reloads fetch the home file by default
-window.onload = fetchHtml('home');
+window.onload = function() {
+    clearTimeout(loadingTimeout);
+    loader.style.display = "none";
+    content.style.display= "block";
+    fetchHtml('home');
+}
+
+loadingTimeout = setTimeout(function() {
+    loader.style.display = "block";
+}, 300);
  
 // If user navigate to website by specific link choose right page or default home
 window.addEventListener('popstate', (event) => {
@@ -18,6 +31,7 @@ window.addEventListener('popstate', (event) => {
             fetchHtml('contact');
             break
         default:
+
             fetchHtml('home');
     }
 })
@@ -69,8 +83,4 @@ function switchStyle(filename){
         }else{
             stylesheet.includes = '/styles/home.css';
         }
-}
-
-function loadingPage(){
-    
 }

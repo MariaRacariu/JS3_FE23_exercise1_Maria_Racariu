@@ -19,8 +19,7 @@
     display: flex;
     justify-content: start;
     height: 50px;
-    position: relative;
-    z-index: 1;
+    
     background-color: var(--orange);
 }
 
@@ -29,6 +28,8 @@
     padding: 20px;
     color: var(--fontDark);
     font-weight: 600;
+    position: relative;
+    z-index: 3;
 }
 
 .navigationContainer > li:hover{
@@ -69,8 +70,15 @@
 }
 
 /* Loader */
+
+.loaderContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--orange);
+}
+
 .loader {
-    display: none;
     width: 45px;
     aspect-ratio: 1;
     --c: no-repeat linear-gradient(#000 0 0);
