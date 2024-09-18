@@ -46,11 +46,31 @@ contact.addEventListener('click', (event) => {
 
 // Not sure
 function fetchHtml(filename) {
+
     fetch(`./${filename}.html`)
         .then((response) => {
-            return response.text()
+            switchStyle(filename);
+            return response.text();  
         })
         .then((html) => {
-            content.innerHTML = html
+            content.innerHTML = html;
         })
+}
+
+function switchStyle(filename){
+        const stylesheet = document.getElementById('pageTheme');
+
+        if(filename.includes('home')){
+            stylesheet.href = '/styles/home.css';
+        }else if(filename.includes('about')){
+            stylesheet.href = '/styles/about.css';
+        }else if(filename.includes('contact')){
+            stylesheet.href = '/styles/contact.css';
+        }else{
+            stylesheet.includes = '/styles/home.css';
+        }
+}
+
+function loadingPage(){
+    
 }
