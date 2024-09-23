@@ -34,11 +34,13 @@
 
 .navigationContainer > li:hover{
     cursor: pointer;
+    text-decoration: underline #62db9d;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
 }
 
 .imageContainer{
     width: auto;
-    /* height: 100%; */
     display: flex;
     justify-content: end;
     overflow: visible;
