@@ -87,6 +87,10 @@ function switchStyle(filename){
         }
 }
 
+function contactForm(event){
+    event.preventDefault();
+    alert("This form does not work but thank you for trying. You can reach me using my email at the bottom of the page. Have a nice day");
+}
 // Extra
 
 // The object

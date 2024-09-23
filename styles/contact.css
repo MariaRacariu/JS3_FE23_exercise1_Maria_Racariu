@@ -2,6 +2,7 @@ html{
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #d88830;
 }
 
 body{
@@ -15,10 +16,19 @@ body{
 .content{
     display: flex !important;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     flex-grow: 1;
     width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contactImage{
+    height: 800px;
 }
 
 .mainContainer{
@@ -28,7 +38,7 @@ body{
     align-items: center;
     flex-grow: 1;
     width: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
 }
 
 .mainContainer > form > h1{
@@ -51,4 +61,47 @@ body{
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+}
+
+.infoContainer{
+    position: absolute;
+    z-index: 2;
+    background-color: #62db9d;
+    top: 70%;
+    margin-left: -40px;
+    padding: 50px;
+    border: 10px dashed #51a57771;
+    transform: skew(-15deg);
+}
+
+.infoContainer > p{
+    font-weight: 500;
+}
+
+.inputContainer > input , .inputContainer > textarea{
+    background-color: #d88830;
+    border: none;
+    border-bottom: 1px solid #000;
+    height: 30px;
+}
+
+.inputContainer > input:focus, .inputContainer > textarea:focus{
+    outline: none;
+}
+
+.inputContainer>textarea{
+    max-height: 300px;
+}
+
+.submitButton{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.submitButton:hover{
+    cursor: pointer;
 }
