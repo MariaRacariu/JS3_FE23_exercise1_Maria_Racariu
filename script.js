@@ -88,8 +88,82 @@ function switchStyle(filename){
 }
 
 // Extra
-const test = {
+
+// The object
+const bank = {
     name : "Miss Piggys bank",
-    amount: 5000,
+    amount: 0,
+
+    // Check balance
+    balance: function(){
+        return this.amount;
+    },
+
+    // Add money
+    add: function(input){
+        const result = this.amount + input;
+        return result;
+    },
+
+    withdraw: function(input){
+        const result = this.amount - input;
+        return result;
+    }
 
 }
+
+// The class
+class User{
+    constructor(name, amount){
+        this.name = name;
+        this.amount = amount;
+    }
+
+    // Check balance
+    balance(){
+        console.log(`${this.name} balance: ${this.amount}`);
+    }
+
+    // Add money
+    add(input){
+        const result = this.amount + input;
+        this.amount = result;
+        console.log(`${input} added to ${this.name}. New balance: ${result}`);
+    }
+
+    // Withdraw
+    withdraw(input){
+        const result = this.amount - input;
+        this.amount = result;
+        console.log(`${input} was withdrew from ${this.name} account. New balance: ${result}`);
+    }
+
+    // Weekly Allowance
+    allowance(){
+        const weeklyAmount = setInterval(() =>{
+            this.add(10);
+        },10000); // 10 sec
+
+        setTimeout(() =>{
+            this.balance();
+            clearInterval(weeklyAmount);
+            console.log("Allowance stopped");
+
+            accountAnders.add(10);
+
+            // Show amount
+            accountLotta.balance();
+            accountAnders.balance();
+        }, 30000); // 30 sec
+    }
+    
+}
+
+// Lotta
+const accountLotta = new User("Lotta", 0);
+console.log(accountLotta);
+accountLotta.allowance();
+
+// Anders
+const accountAnders = new User("Anders", 0);
+console.log(accountAnders);

@@ -8,8 +8,15 @@
     position: relative;
     z-index: 2;
     background-color: transparent;
-   margin-top: -50px;
+    margin-top: -60px;
+    animation: fadeIn 1s;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; right: -50px; }
+    100% { opacity: 1; right: 0px; }
+}
+  
 
 .dendroImage{
     height: 45px;
