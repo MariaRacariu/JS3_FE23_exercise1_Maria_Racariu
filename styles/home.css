@@ -81,7 +81,7 @@
     font-size: 40px;
     font-weight: 600;
     color: var(--fontDark);
-    border-left: #62db9d solid 4px;
+    border-left: #62db9d solid 10px;
     padding-left: 15px;
 }
 
