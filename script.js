@@ -58,7 +58,8 @@ contact.addEventListener('click', (event) => {
     fetchHtml('contact');
 });
 
-// Not sure
+
+
 function fetchHtml(filename) {
 
     fetch(`./${filename}.html`)
@@ -71,6 +72,7 @@ function fetchHtml(filename) {
         })
 }
 
+// Switches Styles depending on page
 function switchStyle(filename){
         const stylesheet = document.getElementById('pageTheme');
 
@@ -83,4 +85,11 @@ function switchStyle(filename){
         }else{
             stylesheet.includes = '/styles/home.css';
         }
+}
+
+// Extra
+const test = {
+    name : "Miss Piggys bank",
+    amount: 5000,
+
 }
