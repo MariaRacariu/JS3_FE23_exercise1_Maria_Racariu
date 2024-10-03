@@ -162,12 +162,59 @@ class User{
     }
     
 }
+function startTest(){
+        // Lotta
+    const accountLotta = new User("Lotta", 0);
+    console.log(accountLotta);
+    accountLotta.allowance();
 
-// Lotta
-const accountLotta = new User("Lotta", 0);
-console.log(accountLotta);
-accountLotta.allowance();
+    // Anders
+    const accountAnders = new User("Anders", 0);
+    console.log(accountAnders);
 
-// Anders
-const accountAnders = new User("Anders", 0);
-console.log(accountAnders);
+    // Navigation
+    const closeIcon = document.getElementById("closeIcon");
+    const openIcon = document.getElementById("openIcon");
+
+    const navigationContainer = document.getElementById("navigationContainer");
+}
+
+const footer = document.getElementById("footer");
+
+openIcon.addEventListener("click", (event) => {
+    event.preventDefault;
+
+    // Show navigation options
+    navigationContainer.style.display = "block";
+
+    // Hide page content
+    content.style.display = "none";
+    footer.style.display = "none";
+
+    // Hide open button
+    openIcon.style.display = "none";
+
+    // Show close button
+    closeIcon.style.display = "block";
+
+    console.log("Open");
+});
+
+closeIcon.addEventListener("click", (event) => {
+    event.preventDefault;
+
+    // Hide navigation options
+    navigationContainer.style.display = "none";
+
+    // Show page content
+    content.style.display = "flex";
+    footer.style.display = "flex";
+
+    // Hide close button
+    closeIcon.style.display = "none";
+
+    // Show open button
+    openIcon.style.display = "block";
+
+    console.log("Close");
+});

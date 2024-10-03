@@ -1,6 +1,7 @@
 :root{
     --orange:#d88830;
     --fontDark: #000;
+    --blueGreen: #62db9d;
 }
 
 *{
@@ -13,62 +14,74 @@
     font-style: normal;
 }
 
+/* Navigation */
+nav{
+    height: 100%;
+}
+
+.closeIcon{
+    display: none;
+}
+
+.navbarButtonsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
 
 
 .navigationContainer{
-    display: flex;
-    justify-content: start;
-    height: 50px;
-    background-color: var(--orange);
-    padding-bottom: 10px;
+    background-color: var(--fontDark);
+    display: none;
+    height: 100%;
 }
 
-.navigationContainer > li{
+.navigationContainer > ul{
+    padding-left: 0px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navigationContainer > ul > li{
     list-style: none;
     padding: 20px;
-    color: var(--fontDark);
     font-weight: 600;
-    position: relative;
-    z-index: 3;
+    color: #fff;
 }
 
 .navigationContainer > li:hover{
-    cursor: pointer;
-    text-decoration: underline #62db9d;
+    /* cursor: pointer;
+    text-decoration: underline var(--blueGreen);
     text-decoration-thickness: 3px;
-    text-underline-offset: 8px;
-}
-
-.imageContainer{
-    width: auto;
-    display: flex;
-    justify-content: end;
-    overflow: visible;
-
+    text-underline-offset: 8px; */
 }
 
 
 
 /* Footer */
 .footer{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     height: 50px;
     background-color: var(--orange);
-    box-shadow: 10px 4px 40px #b56f25;
+    box-shadow: 10px 4px 40px var(--orange); */
 }
 
 .footer>div{
-    display: flex;
+    /* display: flex;
     align-items: center;
     column-gap: 20px;
     min-width: 200px;
     justify-content: center;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px; */
 }
 
 .link, .footer>div>p, .footer>div>div>p{
-    color: #000;
+    color: var(--fontDark);
 }
 
 /* Loader */
@@ -83,7 +96,7 @@
 .loader {
     width: 45px;
     aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#000 0 0);
+    --c: no-repeat linear-gradient(var(--fontDark) 0 0);
     background: 
       var(--c) 0%   50%,
       var(--c) 50%  50%,

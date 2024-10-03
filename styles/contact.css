@@ -16,8 +16,6 @@ body{
 .content{
     display: flex !important;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     flex-grow: 1;
     width: 100%;
 }
